@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema version="1.0" targetNamespace="http://developer.intuit.com/" xmlns:tns="http://developer.intuit.com/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:element name="authenticate" type="tns:authenticate"/>
+
+  <xs:element name="authenticateResponse" type="tns:authenticateResponse"/>
+
+  <xs:element name="clientVersion" type="tns:clientVersion"/>
+
+  <xs:element name="clientVersionResponse" type="tns:clientVersionResponse"/>
+
+  <xs:element name="closeConnection" type="tns:closeConnection"/>
+
+  <xs:element name="closeConnectionResponse" type="tns:closeConnectionResponse"/>
+
+  <xs:element name="connectionError" type="tns:connectionError"/>
+
+  <xs:element name="connectionErrorResponse" type="tns:connectionErrorResponse"/>
+
+  <xs:element name="getLastError" type="tns:getLastError"/>
+
+  <xs:element name="getLastErrorResponse" type="tns:getLastErrorResponse"/>
+
+  <xs:element name="receiveResponseXML" type="tns:receiveResponseXML"/>
+
+  <xs:element name="receiveResponseXMLResponse" type="tns:receiveResponseXMLResponse"/>
+
+  <xs:element name="sendRequestXML" type="tns:sendRequestXML"/>
+
+  <xs:element name="sendRequestXMLResponse" type="tns:sendRequestXMLResponse"/>
+
+  <xs:element name="serverVersion" type="tns:serverVersion"/>
+
+  <xs:element name="serverVersionResponse" type="tns:serverVersionResponse"/>
+
+  <xs:complexType name="clientVersion">
+    <xs:sequence>
+      <xs:element name="strVersion" type="xs:string" form="qualified" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="clientVersionResponse">
+    <xs:sequence>
+      <xs:element name="clientVersionResult" type="xs:string" form="qualified" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getLastError">
+    <xs:sequence>
+      <xs:element name="ticket" type="xs:string" form="qualified" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getLastErrorResponse">
+    <xs:sequence>
+      <xs:element name="getLastErrorResult" type="xs:string" form="qualified" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="serverVersion">
+    <xs:sequence>
+      <xs:element name="strVersion" type="xs:string" form="qualified" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="serverVersionResponse">
+    <xs:sequence>
+      <xs:element name="serverVersionResult" type="xs:string" form="qualified" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="connectionError">
+    <xs:sequence>
+      <xs:element name="ticket" type="xs:string" form="qualified" minOccurs="0"/>
+      <xs:element name="hresult" type="xs:string" form="qualified" minOccurs="0"/>
+      <xs:element name="message" type="xs:string" form="qualified" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="connectionErrorResponse">
+    <xs:sequence>
+      <xs:element name="connectionErrorResult" type="xs:string" form="qualified" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="sendRequestXML">
+    <xs:sequence>
+      <xs:element name="ticket" type="xs:string" form="qualified" minOccurs="0"/>
+      <xs:element name="strHCPResponse" type="xs:string" form="qualified" minOccurs="0"/>
+      <xs:element name="strCompanyFileName" type="xs:string" form="qualified" minOccurs="0"/>
+      <xs:element name="qbXMLCountry" type="xs:string" form="qualified" minOccurs="0"/>
+      <xs:element name="qbXMLMajorVers" type="xs:int" form="qualified"/>
+      <xs:element name="qbXMLMinorVers" type="xs:int" form="qualified"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="sendRequestXMLResponse">
+    <xs:sequence>
+      <xs:element name="sendRequestXMLResult" type="xs:string" form="qualified" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="authenticate">
+    <xs:sequence>
+      <xs:element name="strUserName" type="xs:string" form="qualified" minOccurs="0"/>
+      <xs:element name="strPassword" type="xs:string" form="qualified" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="authenticateResponse">
+    <xs:sequence>
+      <xs:element name="authenticateResult" type="tns:arrayOfString" form="qualified" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="arrayOfString">
+    <xs:sequence>
+      <xs:element name="string" type="xs:string" form="qualified" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="closeConnection">
+    <xs:sequence>
+      <xs:element name="ticket" type="xs:string" form="qualified" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="closeConnectionResponse">
+    <xs:sequence>
+      <xs:element name="closeConnectionResult" type="xs:string" form="qualified" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="receiveResponseXML">
+    <xs:sequence>
+      <xs:element name="ticket" type="xs:string" form="qualified" minOccurs="0"/>
+      <xs:element name="response" type="xs:string" form="qualified" minOccurs="0"/>
+      <xs:element name="hresult" type="xs:string" form="qualified" minOccurs="0"/>
+      <xs:element name="message" type="xs:string" form="qualified" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="receiveResponseXMLResponse">
+    <xs:sequence>
+      <xs:element name="receiveResponseXMLResult" type="xs:int" form="qualified"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
+

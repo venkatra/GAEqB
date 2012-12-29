@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<QBWCXML>
+	<AppName>GAE_QBLoader</AppName>
+	<AppID>GAE_QBLDR</AppID>
+	<AppURL><GAE_APP_URL>/qbsync</AppURL>
+	<CertURL><GAE_APP_URL>/GAECert.cert</CertURL>
+	<AppDescription>GAE + Quickbook app engine</AppDescription>
+	<AppSupport><GAE_APP_URL>/GAEqBSyncSupport/</AppSupport>
+	<UserName>test</UserName>
+	<OwnerID>{A1A93089-7DA7-4d37-A08C-7F1626E9395A}</OwnerID>
+	<FileID>{AE931E67-4AA5-1226-A32D-8EA4BEC92012}</FileID>
+	<QBType>QBFS</QBType>
+	<AuthFlags>0xF</AuthFlags>
+</QBWCXML>

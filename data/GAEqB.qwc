@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<QBWCXML>
+	<AppName>GAEqB</AppName>
+	<AppID>QBLDR</AppID>
+	<AppURL>http://localhost:8888/qbsync</AppURL>
+	<AppDescription>GAE + Quickbook app engine</AppDescription>
+	<AppSupport>http://developer.intuit.com/QBWebConnector/</AppSupport>
+	<UserName>test</UserName>
+	<OwnerID>{A9A83089-7DA7-4d27-A08C-7E1626E9395A}</OwnerID>
+	<FileID>{AE931E67-4AA5-4374-A32D-8EA4BEC91981}</FileID>
+	<QBType>QBFS</QBType>
+	<AuthFlags>0xF</AuthFlags>
+</QBWCXML>
